@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-permissions"
+        version="1.0.0">
+  <name>Permissions</name>
+  <description>Android - iOS permissions support library.</description>
+  <author>Jorge Torres</author>
+
+  <engines>
+    <engine name="cordova" version=">=7.0.0"/>
+    <engine name="cordova-android" version=">=6.3.0" />
+  </engines>
+
+  <!-- android -->
+  <platform name="android">
+    <js-module src="www/permissions-android.js" name="Permissions">
+      <clobbers target="cordova.plugins.permissions" />
+    </js-module>
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/android/plugins/Permissions.java" target-dir="src/com/android/plugins"/>
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <js-module src="www/permissions-ios.js" name="Permissions">
+      <clobbers target="cordova.plugins.permissions" />
+    </js-module>
+
+    <header-file src="src/ios/CameraAccess.h" />
+    <source-file src="src/ios/CameraAccess.m" />
+    <header-file src="src/ios/PictureAccess.h" />
+    <source-file src="src/ios/PictureAccess.m" />
+  </platform>
+
+</plugin>

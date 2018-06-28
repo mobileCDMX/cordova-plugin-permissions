@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-permissions",
+  "version": "1.0.0",
+  "description": "Android - iOS permissions support library.",
+  "cordova": {
+    "id": "cordova-plugin-permissions",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=7.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=6.3.0"
+    }
+  ],
+  "author": "Jorge Torres",
+  "license": "Apache 2.0"
+}
