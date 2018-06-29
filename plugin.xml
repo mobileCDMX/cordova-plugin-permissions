@@ -29,8 +29,40 @@
 
   <!-- ios -->
   <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="Permissions">
+            <param name="ios-package" value="Permissions" />
+            <param name="onload" value="true" />
+        </feature>
+    </config-file>
+
     <js-module src="www/permissions-ios.js" name="Permissions">
       <clobbers target="cordova.plugins.permissions" />
+    </js-module>
+
+    <header-file src="src/ios/Permissions.h" />
+    <source-file src="src/ios/Permissions.m" />
+
+    <!--BEGIN_MODULE LOCATION-->
+    <config-file target="config.xml" parent="/*">
+      <feature name="CameraAccess">
+        <param name="ios-package" value="CameraAccess" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <js-module src="www/ios/permissions.CameraAccess.js" name="CameraAccess">
+      <merges target="cordova.plugins.permissions.CameraAccess" />
+    </js-module>
+
+    <!--BEGIN_MODULE LOCATION-->
+    <config-file target="config.xml" parent="/*">
+      <feature name="PictureAccess">
+        <param name="ios-package" value="PictureAccess" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <js-module src="www/ios/permissions.PictureAccess.js" name="PictureAccess">
+      <merges target="cordova.plugins.permissions.PictureAccess" />
     </js-module>
 
     <header-file src="src/ios/CameraAccess.h" />

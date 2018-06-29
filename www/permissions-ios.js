@@ -2,12 +2,9 @@ var permissionsName = 'Permissions';
 
 function Permissions() {
 
-    this.CAMERA = 'android.permission.CAMERA';
-    this.CAPTURE_AUDIO_OUTPUT = 'android.permission.CAPTURE_AUDIO_OUTPUT';
-    this.CAPTURE_SECURE_VIDEO_OUTPUT = 'android.permission.CAPTURE_SECURE_VIDEO_OUTPUT';
-    this.CAPTURE_VIDEO_OUTPUT = 'android.permission.CAPTURE_VIDEO_OUTPUT';
-    this.READ_EXTERNAL_STORAGE = 'android.permission.READ_EXTERNAL_STORAGE';
-    this.WRITE_EXTERNAL_STORAGE = 'android.permission.WRITE_EXTERNAL_STORAGE';
+    this.CAMERA = 'CAMERA';
+    this.READ_EXTERNAL_STORAGE = 'READ_EXTERNAL_STORAGE';
+    this.WRITE_EXTERNAL_STORAGE = 'WRITE_EXTERNAL_STORAGE';
 }
 
 Permissions.prototype = {
