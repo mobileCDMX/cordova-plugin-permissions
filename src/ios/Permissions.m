@@ -2,14 +2,14 @@
 
 @implementation Permissions
 
-    static Permissions* Permissions = nil;
+    static Permissions* permissions = nil;
 
     /********************************/
     #pragma mark - Public static functions
     /********************************/
     
     + (id) getInstance{
-        return Permissions;
+        return permissions;
     }
     
     /********************************/
@@ -20,7 +20,7 @@
 
         [super pluginInitialize];
 
-        Permissions = self;
+        permissions = self;
 
         self.debugEnabled = false;
         self.osVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
