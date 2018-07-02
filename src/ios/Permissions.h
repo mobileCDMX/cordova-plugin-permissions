@@ -13,7 +13,7 @@ extern NSString*const AUTHORIZATION_NOT_DETERMINED;
 extern NSString*const AUTHORIZATION_DENIED;
 extern NSString*const AUTHORIZATION_GRANTED;
 
-@interface Diagnostic : CDVPlugin
+@interface Permissions : CDVPlugin
     
     @property (nonatomic) float osVersion;
     @property (nonatomic) BOOL debugEnabled;
