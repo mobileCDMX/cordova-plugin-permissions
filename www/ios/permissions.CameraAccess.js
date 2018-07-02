@@ -10,4 +10,4 @@ var CameraAccess = (function(){
     };
     return _self;
 });
-module.exports = new PictureAccess();
+module.exports = new CameraAccess();
