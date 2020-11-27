@@ -43,7 +43,7 @@
     <header-file src="src/ios/Permissions.h" />
     <source-file src="src/ios/Permissions.m" />
 
-    <!--BEGIN_MODULE LOCATION-->
+    <!--BEGIN_MODULE LOCATION CAMERA-->
     <config-file target="config.xml" parent="/*">
       <feature name="CameraAccess">
         <param name="ios-package" value="CameraAccess" />
@@ -54,7 +54,7 @@
       <merges target="cordova.plugins.permissions.CameraAccess" />
     </js-module>
 
-    <!--BEGIN_MODULE LOCATION-->
+    <!--BEGIN_MODULE LOCATION PICTURE-->
     <config-file target="config.xml" parent="/*">
       <feature name="PictureAccess">
         <param name="ios-package" value="PictureAccess" />
@@ -64,11 +64,24 @@
     <js-module src="www/ios/permissions.PictureAccess.js" name="PictureAccess">
       <merges target="cordova.plugins.permissions.PictureAccess" />
     </js-module>
+    
+        <!--BEGIN_MODULE LOCATION LOCATION-->
+    <config-file target="config.xml" parent="/*">
+      <feature name="LocationAccess">
+        <param name="ios-package" value="LocationAccess" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <js-module src="www/ios/permissions.LocationAccess.js" name="LocationAccess">
+      <merges target="cordova.plugins.permissions.LocationAccess" />
+    </js-module>
 
     <header-file src="src/ios/CameraAccess.h" />
     <source-file src="src/ios/CameraAccess.m" />
     <header-file src="src/ios/PictureAccess.h" />
     <source-file src="src/ios/PictureAccess.m" />
+    <header-file src="src/ios/LocationAccess.h"/>
+    <source-file src="src/ios/LocationAccess.m" />
   </platform>
 
 </plugin>

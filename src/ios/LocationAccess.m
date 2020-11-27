@@ -17,8 +17,9 @@
         switch (status) {
             case kCLAuthorizationStatusNotDetermined:
                 /* The user hasn't yet chosen whether your app can use location services or not.*/
-                CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-                [locationManager requestWhenInUseAuthorization];
+                self.locationManager = [[CLLocationManager alloc] init];
+                self.locationManager.delegate = self;
+                [self.locationManager requestWhenInUseAuthorization];
                 break;
             case kCLAuthorizationStatusAuthorizedAlways:
                 /* The user has let your app use location services all the time, even if the app is in the background. */
